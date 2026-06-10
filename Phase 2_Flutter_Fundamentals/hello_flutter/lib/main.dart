@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('add dependency for state management'),
+          child: Text('update http and shared_preferences versions'),
         ),
       ),
     );
