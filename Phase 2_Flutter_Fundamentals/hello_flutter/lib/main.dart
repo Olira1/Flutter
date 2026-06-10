@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('configure github actions for automated apk builds'),
+          child: Text('update android version code and build name'),
         ),
       ),
     );
