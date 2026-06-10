@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('implement user login and token storage'),
+          child: Text('handle 404 error response during data fetch'),
         ),
       ),
     );
