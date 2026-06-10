@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('create dio client for network requests'),
+          child: Text('implement user login and token storage'),
         ),
       ),
     );
