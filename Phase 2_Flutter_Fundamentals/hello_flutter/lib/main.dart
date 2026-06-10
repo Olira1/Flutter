@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('implement bottom navigation bar and tabs'),
+          child: Text('add onboarding screen with page transitions'),
         ),
       ),
     );
