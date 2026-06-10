@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('define global light and dark color schemes'),
+          child: Text('resolve render overflow on small screen devices'),
         ),
       ),
     );
