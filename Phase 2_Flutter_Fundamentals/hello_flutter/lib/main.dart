@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('optimize image loading with cached_network_image'),
+          child: Text('add unit tests for login validation logic'),
         ),
       ),
     );
