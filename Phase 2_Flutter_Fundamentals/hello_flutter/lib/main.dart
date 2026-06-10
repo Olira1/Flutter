@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('add unit tests for login validation logic'),
+          child: Text('add widget tests for home screen components'),
         ),
       ),
     );
