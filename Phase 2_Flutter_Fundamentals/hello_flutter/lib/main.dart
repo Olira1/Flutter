@@ -6,13 +6,13 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('Hello Olira now it save the changes automatically'),
+          child: Text('initialize flutter project with base structure'),
         ),
       ),
     );
