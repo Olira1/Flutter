@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('resolve render overflow on small screen devices'),
+          child: Text('extract reusable primary button widget'),
         ),
       ),
     );
