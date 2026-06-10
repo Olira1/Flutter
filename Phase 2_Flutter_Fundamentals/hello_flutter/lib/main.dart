@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('handle 404 error response during data fetch'),
+          child: Text('migrate to Bloc architecture for user profile'),
         ),
       ),
     );
