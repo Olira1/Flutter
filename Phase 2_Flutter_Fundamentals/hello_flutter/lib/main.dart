@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('add widget tests for home screen components'),
+          child: Text('configure github actions for automated apk builds'),
         ),
       ),
     );
