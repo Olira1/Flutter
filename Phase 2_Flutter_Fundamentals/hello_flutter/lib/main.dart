@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('run build_runner to generate serializer files'),
+          child: Text('implement bottom navigation bar and tabs'),
         ),
       ),
     );
