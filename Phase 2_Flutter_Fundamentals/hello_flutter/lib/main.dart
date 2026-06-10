@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('initialize flutter project with base structure'),
+          child: Text('add dependency for state management'),
         ),
       ),
     );
