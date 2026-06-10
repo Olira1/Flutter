@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('update android version code and build name'),
+          child: Text('resolve null pointer exception on empty list state'),
         ),
       ),
     );
