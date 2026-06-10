@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('add onboarding screen with page transitions'),
+          child: Text('define global light and dark color schemes'),
         ),
       ),
     );
