@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('update http and shared_preferences versions'),
+          child: Text('run build_runner to generate serializer files'),
         ),
       ),
     );
