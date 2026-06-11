@@ -4,17 +4,18 @@ void main() {
   runApp(MyApp());
 }
 
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('prepare initial beta release and cleanup unused assets'),
-        ),
-      ),
+          child: Text("New Flutter App"),
+          ),
+          ),
     );
   }
 }
