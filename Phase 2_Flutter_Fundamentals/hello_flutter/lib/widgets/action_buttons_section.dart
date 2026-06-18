@@ -43,7 +43,7 @@ class ActionButtonsSection extends StatelessWidget {
                 onPressed: () => _handleHirePress(context),
                 icon: const Icon(Icons.work_outline),
                 label: const Text(
-                  'integrate bio text area with dynamic character wrapping',
+                  'add onTap gesture detection to navigate to detail view',
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 style: OutlinedButton.styleFrom(
