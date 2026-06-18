@@ -7,15 +7,20 @@ class ProfileHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // Profile Image
+        // Profile Image with fallback
         CircleAvatar(
-          radius: 40,
+          radius: 60,
           backgroundColor: Colors.grey[300],
-          child: Icon(
-            Icons.person,
-            size: 60,
-            color: Colors.grey[600],
-          ),
+          // Option 1: Use network image (works immediately)
+          backgroundImage: _getProfileImage(),
+          // Option 2: Fallback to icon if no image
+          child: _getProfileImage() == null
+              ? Icon(
+                  Icons.person,
+                  size: 60,
+                  color: Colors.grey[600],
+                )
+              : null,
         ),
         
         const SizedBox(height: 16),
@@ -59,5 +64,19 @@ class ProfileHeader extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  // Helper method to get profile image
+  ImageProvider? _getProfileImage() {
+    // Option 1: Use a sample network image (works immediately)
+    // Using a professional placeholder profile image:
+    return const NetworkImage('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face');
+    
+    // Option 2: Use local asset (add profile.jpg to assets/images/ folder first)
+    // Uncomment the line below after adding your image:
+    // return const AssetImage('assets/images/profile.jpg');
+    
+    // Option 3: Keep showing icon placeholder (current setting)
+    // return null;
   }
 }

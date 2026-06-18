@@ -1,0 +1,11 @@
+This is a placeholder file.
+
+To complete your Business Card app, please:
+
+1. Add a profile image named "profile.jpg" to this folder
+2. Recommended image specifications:
+   - Size: 300x300 pixels (square)
+   - Format: JPG or PNG
+   - High quality, professional photo
+
+The app will automatically load your image once you add it here!
