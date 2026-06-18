@@ -43,7 +43,7 @@ class ActionButtonsSection extends StatelessWidget {
                 onPressed: () => _handleHirePress(context),
                 icon: const Icon(Icons.work_outline),
                 label: const Text(
-                  'implement dynamic light and dark theme support',
+                  'handle overflow errors for excessively long usernames',
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 style: OutlinedButton.styleFrom(
