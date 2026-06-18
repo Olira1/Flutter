@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'screens/business_card_screen.dart';
+import 'screens/business_card_screen.dart';
 
 class BusinessCardApp extends StatelessWidget {
   const BusinessCardApp({super.key});
@@ -18,7 +18,7 @@ class BusinessCardApp extends StatelessWidget {
       ),
       
       // Home screen
-    //   home: const BusinessCardScreen(),
+      home: const BusinessCardScreen(),
     );
   }
 }
