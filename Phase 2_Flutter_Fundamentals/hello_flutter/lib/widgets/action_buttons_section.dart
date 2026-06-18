@@ -43,7 +43,7 @@ class ActionButtonsSection extends StatelessWidget {
                 onPressed: () => _handleHirePress(context),
                 icon: const Icon(Icons.work_outline),
                 label: const Text(
-                  'implement follow button with toggleable state logic',
+                  'add settings popup menu to top-right corner of card',
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 style: OutlinedButton.styleFrom(
