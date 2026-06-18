@@ -43,7 +43,7 @@ class ActionButtonsSection extends StatelessWidget {
                 onPressed: () => _handleHirePress(context),
                 icon: const Icon(Icons.work_outline),
                 label: const Text(
-                  'add statistics section (following, followers, posts) to card',
+                  'integrate bio text area with dynamic character wrapping',
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 style: OutlinedButton.styleFrom(
