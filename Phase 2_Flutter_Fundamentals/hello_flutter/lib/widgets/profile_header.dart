@@ -9,7 +9,7 @@ class ProfileHeader extends StatelessWidget {
       children: [
         // Profile Image
         CircleAvatar(
-          radius: 60,
+          radius: 40,
           backgroundColor: Colors.grey[300],
           child: Icon(
             Icons.person,
@@ -22,7 +22,7 @@ class ProfileHeader extends StatelessWidget {
         
         // Name
         const Text(
-          'John Doe',
+          'Olira Tesgera',
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.bold,
@@ -38,7 +38,7 @@ class ProfileHeader extends StatelessWidget {
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w500,
-            color: Colors.blue,
+            color: Colors.green,
           ),
         ),
         
