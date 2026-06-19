@@ -13,10 +13,11 @@ class ProfileHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           title,
-          textAlign: TextAlign.start,
+          textAlign: TextAlign.center,
           style: TextStyle(fontSize: 20,),
         )
         

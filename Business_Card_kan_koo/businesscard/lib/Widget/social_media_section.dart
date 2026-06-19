@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 
 class SocialMediaSection extends StatelessWidget {
-  const SocialMediaSection({super.key});
+  final String title;
+  const SocialMediaSection({
+    super.key,
+    required this.title,
+    });
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+        return Column(
+          children: [
+            Text(
+              title,
+              style: TextStyle(fontSize: 20),
+              )
+              ]
+              );
   }
 }

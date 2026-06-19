@@ -19,16 +19,17 @@ class BusinessCardScreen extends StatelessWidget {
 
         body: const SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(0),
+            padding: EdgeInsets.all(16.0),
 
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ProfileHeader(
-                  title: 'your profile will be written here',
+                  title: 'your profile will be here',
                 ),
-                ContactInfoItem(),
-                SocialMediaSection(),
-                ActionButtonsSection(),
+                ContactInfoItem(title: 'your contact will be here'),
+                SocialMediaSection(title: 'your contact will be here'),
+                ActionButtonsSection(title: 'Your action will be here',),
               ],
             ),
           )
