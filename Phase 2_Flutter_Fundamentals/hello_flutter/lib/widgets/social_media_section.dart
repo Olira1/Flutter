@@ -17,9 +17,9 @@ class SocialMediaSection extends StatelessWidget {
             color: Colors.black87,
           ),
         ),
-        
+
         const SizedBox(height: 12),
-        
+
         // Social Media Icons Row
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -53,7 +53,7 @@ class SocialMediaSection extends StatelessWidget {
       ],
     );
   }
-  
+
   void _showMessage(String message) {
     // For now, just a placeholder - in real apps this would open URLs
     debugPrint(message);
@@ -65,7 +65,7 @@ class _SocialIcon extends StatelessWidget {
   final String label;
   final Color color;
   final VoidCallback onTap;
-  
+
   const _SocialIcon({
     required this.icon,
     required this.label,
@@ -83,19 +83,12 @@ class _SocialIcon extends StatelessWidget {
         decoration: BoxDecoration(
           color: color.withValues(alpha: 0.1),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: color.withValues(alpha: 0.2),
-            width: 1,
-          ),
+          border: Border.all(color: color.withValues(alpha: 0.2), width: 1),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(
-              icon,
-              color: color,
-              size: 24,
-            ),
+            Icon(icon, color: color, size: 24),
             const SizedBox(height: 4),
             Text(
               label,
