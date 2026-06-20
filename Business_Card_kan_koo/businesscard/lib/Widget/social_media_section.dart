@@ -93,7 +93,8 @@ class _SocialIcon extends StatelessWidget {
           Icon(icon, color:color, size: 24,),
           const SizedBox(height: 4,),
           Text(
-          label
+          label,
+          style: TextStyle(color: color),
           )
         ],
       ),
