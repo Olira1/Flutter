@@ -55,7 +55,7 @@ class BusinessCardScreen extends StatelessWidget {
                 SizedBox(height: 25),
                 SocialMediaSection(),
                 SizedBox(height: 20,),
-                ActionButtonsSection(title: 'Your action will be here'),
+                ActionButtonsSection(),
               ],
             ),
           ),

@@ -31,13 +31,13 @@ class SocialMediaSection extends StatelessWidget {
           onTap: () => _showMessage('GitHub clicked!'),
         ),
            _SocialIcon(
-          icon: Icons.work,
+          icon: Icons.alternate_email,
           label: 'Twitter',
           color: const Color(0xFF2EA7F2),
           onTap: () => _showMessage('Twitter clicked!'),
         ),
            _SocialIcon(
-          icon: Icons.work,
+          icon: Icons.language,
           label: 'Portfolio',
           color: const Color(0xFF6568F1),
           onTap: () => _showMessage('Portfolio clicked!'),
