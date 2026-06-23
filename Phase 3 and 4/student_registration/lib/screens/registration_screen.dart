@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../models/student.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -240,7 +241,16 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 child: ElevatedButton(
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      // Form is valid, process data
+                      // Create Student object from form data
+                      Student newStudent = Student.fromFormData(
+                        name: _nameController.text.trim(),
+                        email: _emailController.text.trim(),
+                        phone: _phoneController.text.trim(),
+                        department: _selectedDepartment,
+                        age: int.parse(_ageController.text.trim()),
+                      );
+                      
+                      // Show success message
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text('Registration Successful!'),
@@ -248,12 +258,10 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         ),
                       );
                       
-                      // Print form data (for now)
-                      print('Name: ${_nameController.text}');
-                      print('Email: ${_emailController.text}');
-                      print('Phone: ${_phoneController.text}');
-                      print('Department: $_selectedDepartment');
-                      print('Age: ${_ageController.text}');
+                      // Print student object (for testing)
+                      print('Created Student: $newStudent');
+                      print('Student Initials: ${newStudent.initials}');
+                      print('Registration Date: ${newStudent.formattedDate}');
                       
                       // Navigate back after 1 second
                       Future.delayed(Duration(seconds: 1), () {
