@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/student.dart';
+import 'profile_screen.dart';
+
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -263,10 +265,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       print('Student Initials: ${newStudent.initials}');
                       print('Registration Date: ${newStudent.formattedDate}');
                       
-                      // Navigate back after 1 second
-                      Future.delayed(Duration(seconds: 1), () {
-                        Navigator.pop(context);
-                      });
+                     // Navigate to profile screen with student data
+                    Future.delayed(Duration(seconds: 1), () {
+                      Navigator.pop(context); // Go back to home first
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfileScreen(student: newStudent),
+                        ),
+                      );
+                    });
+
                     }
                   },
                   style: ElevatedButton.styleFrom(
