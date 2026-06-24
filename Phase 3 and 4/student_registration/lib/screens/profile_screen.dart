@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import '../models/student.dart';
 import '../constants/app_colors.dart';
+import 'dashboard_screen.dart';
+
 
 class ProfileScreen extends StatelessWidget {
   final Student student;
@@ -361,15 +363,16 @@ class ProfileScreen extends StatelessWidget {
                 
                 Expanded(
                   child: ElevatedButton.icon(
-                    onPressed: () {
-                      // TODO: Add to dashboard functionality
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text('Added to dashboard!'),
-                          backgroundColor: Colors.green,
-                        ),
-                      );
+                   onPressed: () {
+                    // Navigate to dashboard
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DashboardScreen(),
+                      ),
+                    );
                     },
+
                     icon: Icon(Icons.dashboard),
                     label: Text('Add to Dashboard'),
                     style: ElevatedButton.styleFrom(
