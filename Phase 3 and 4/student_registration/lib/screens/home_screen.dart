@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'registration_screen.dart';
+import '../widgets/stat_card.dart';
+import '../widgets/category_card.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -65,109 +68,41 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: 16),
 
               // Statistics Cards Row
-              Row(
-                children: [
-                  Expanded(
-                    child: Card(
-                      child: Padding(
-                        padding: EdgeInsets.all(16.0),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.people,
-                              size: 32,
-                              color: Colors.green,
-                            ),
-                            SizedBox(height: 8),
-                            Text(
-                              '150',
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              'Total Students',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
-                        ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: StatCard(
+                        icon: Icons.people,
+                        value: '150',
+                        label: 'Total Students',
+                        color: Colors.green,
                       ),
                     ),
-                  ),
-                  
-                  SizedBox(width: 12),
-                  
-                  Expanded(
-                    child: Card(
-                      child: Padding(
-                        padding: EdgeInsets.all(16.0),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.person_add,
-                              size: 32,
-                              color: Colors.orange,
-                            ),
-                            SizedBox(height: 8),
-                            Text(
-                              '25',
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              'New This Month',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
-                        ),
+                    
+                    SizedBox(width: 12),
+                    
+                    Expanded(
+                      child: StatCard(
+                        icon: Icons.person_add,
+                        value: '25',
+                        label: 'New This Month',
+                        color: Colors.orange,
                       ),
                     ),
-                  ),
-                  
-                  SizedBox(width: 12),
-                  
-                  Expanded(
-                    child: Card(
-                      child: Padding(
-                        padding: EdgeInsets.all(16.0),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.book,
-                              size: 32,
-                              color: Colors.purple,
-                            ),
-                            SizedBox(height: 8),
-                            Text(
-                              '8',
-                              style: TextStyle(
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              'Active Courses',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
-                        ),
+                    
+                    SizedBox(width: 12),
+                    
+                    Expanded(
+                      child: StatCard(
+                        icon: Icons.book,
+                        value: '8',
+                        label: 'Active Courses',
+                        color: Colors.purple,
                       ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
+
               
               SizedBox(height: 32),
               
@@ -190,8 +125,11 @@ class HomeScreen extends StatelessWidget {
                   crossAxisSpacing: 12,
                   mainAxisSpacing: 12,
                   children: [
-                    // Students Category
-                    InkWell(
+                    CategoryCard(
+                      icon: Icons.school,
+                      title: 'Students',
+                      subtitle: 'Manage student profiles',
+                      color: Colors.blue,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -200,151 +138,36 @@ class HomeScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Card(
-                        child: Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.school,
-                                size: 40,
-                                color: Colors.blue,
-                              ),
-                              SizedBox(height: 8),
-                              Text(
-                                'Students',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                'Manage student profiles',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
                     ),
                     
-                    // Courses Category
-                    InkWell(
+                    CategoryCard(
+                      icon: Icons.book,
+                      title: 'Courses',
+                      subtitle: 'Browse available courses',
+                      color: Colors.green,
                       onTap: () {
                         print('Courses tapped');
                       },
-                      child: Card(
-                        child: Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.book,
-                                size: 40,
-                                color: Colors.green,
-                              ),
-                              SizedBox(height: 8),
-                              Text(
-                                'Courses',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                'Browse available courses',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
                     ),
                     
-                    // Reports Category
-                    InkWell(
+                    CategoryCard(
+                      icon: Icons.bar_chart,
+                      title: 'Reports',
+                      subtitle: 'View analytics & reports',
+                      color: Colors.orange,
                       onTap: () {
                         print('Reports tapped');
                       },
-                      child: Card(
-                        child: Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.bar_chart,
-                                size: 40,
-                                color: Colors.orange,
-                              ),
-                              SizedBox(height: 8),
-                              Text(
-                                'Reports',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                'View analytics & reports',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
                     ),
                     
-                    // Settings Category
-                    InkWell(
+                    CategoryCard(
+                      icon: Icons.settings,
+                      title: 'Settings',
+                      subtitle: 'App configuration',
+                      color: Colors.purple,
                       onTap: () {
                         print('Settings tapped');
                       },
-                      child: Card(
-                        child: Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.settings,
-                                size: 40,
-                                color: Colors.purple,
-                              ),
-                              SizedBox(height: 8),
-                              Text(
-                                'Settings',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                'App configuration',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey,
-                                ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
                     ),
                   ],
                 ),
