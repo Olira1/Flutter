@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'registration_screen.dart';
 import '../widgets/stat_card.dart';
 import '../widgets/category_card.dart';
+import '../widgets/app_drawer.dart';
+
 
 
 class HomeScreen extends StatelessWidget {
@@ -16,6 +18,7 @@ class HomeScreen extends StatelessWidget {
         foregroundColor: Colors.white,
         elevation: 0,
       ),
+      drawer: AppDrawer(currentRoute: 'home'),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(16.0),

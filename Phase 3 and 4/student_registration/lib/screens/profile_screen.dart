@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../models/student.dart';
 import '../constants/app_colors.dart';
 import 'dashboard_screen.dart';
+import '../widgets/app_drawer.dart';
+
 
 
 class ProfileScreen extends StatelessWidget {
@@ -33,6 +35,7 @@ class ProfileScreen extends StatelessWidget {
           ),
         ],
       ),
+      drawer: AppDrawer(currentRoute: 'profile'),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
         child: Column(

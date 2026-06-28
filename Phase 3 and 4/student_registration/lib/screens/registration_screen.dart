@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/student.dart';
 import 'profile_screen.dart';
+import '../widgets/app_drawer.dart';
+
 
 
 class RegistrationScreen extends StatefulWidget {
@@ -44,6 +46,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         foregroundColor: Colors.white,
         elevation: 0,
       ),
+       drawer: AppDrawer(currentRoute: 'registration'),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
         child: Form(

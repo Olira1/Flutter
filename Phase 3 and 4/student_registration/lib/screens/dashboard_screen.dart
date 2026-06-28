@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
+import '../widgets/app_drawer.dart';
+
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -31,6 +33,7 @@ class DashboardScreen extends StatelessWidget {
           ),
         ],
       ),
+      drawer: AppDrawer(currentRoute: 'dashboard'),
       body: SingleChildScrollView(
         child: Column(
           children: [
