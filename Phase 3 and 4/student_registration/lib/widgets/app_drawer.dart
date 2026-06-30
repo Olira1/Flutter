@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../screens/home_screen.dart';
 import '../screens/registration_screen.dart';
 import '../screens/dashboard_screen.dart';
-import '../constants/app_colors.dart';
+// import '../constants/app_colors.dart';
 
 class AppDrawer extends StatelessWidget {
   final String currentRoute;
